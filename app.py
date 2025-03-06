@@ -144,10 +144,10 @@ def upload_resume():
 
         response = OrderedDict([
             ("ats_score", ats_score),
-            ("job_description_score", similarity_scores),
             ("ats_fit_status", ats_fit_status),
+             ("job_description_score", similarity_scores),
             ("job_description_fit_status", jd_fit_status),
-           
+            
         ])
 
         return Response(json.dumps(response, indent=4, sort_keys=False), mimetype='application/json')
